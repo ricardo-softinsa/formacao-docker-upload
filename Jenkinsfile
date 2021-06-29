@@ -25,7 +25,7 @@ pipeline{
         stage("Publish Image"){
             steps{
                 //docker login
-                bat "docker login -u ${docker_hub_login_USR} -p ${docker_hub_login_PSW}"
+                //bat "docker login -u ${docker_hub_login_USR} -p ${docker_hub_login_PSW}"
                 echo "Passou"
                 //Publish image
 
