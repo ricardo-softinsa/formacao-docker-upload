@@ -27,6 +27,7 @@ pipeline{
                 script{
                     def scannerHome = tool 'SonarScanner';
                     withSonarQubeEnv('new-sonar') { // If you have configured more than one global server connection, you can specify its name
+                        echo "testing"
                         sh "${scannerHome}/bin/sonar-scanner"
                     }
                 }
