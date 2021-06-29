@@ -26,7 +26,7 @@ pipeline{
             steps{
                 script{
                     def scannerHome = tool 'SonarScanner';
-                    withSonarQubeEnv('formacao-sq') { // If you have configured more than one global server connection, you can specify its name
+                    withSonarQubeEnv('new-sonar') { // If you have configured more than one global server connection, you can specify its name
                         sh "${scannerHome}/bin/sonar-scanner"
                     }
                 }
