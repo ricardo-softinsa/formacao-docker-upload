@@ -3,9 +3,11 @@ pipeline{
         label 'master'
     }
     environment{
+        //Docker Hub
         docker_hub_account = "ricardomiguel"
         repo_name = "python_notes_app"
         image_tag = "latest"
+        docker_hub_login = credentials('docker_hub_formacao')
     }
     stages{
         stage("Build Image"){
@@ -22,7 +24,8 @@ pipeline{
         stage("Publish Image"){
             steps{
                 //docker login
-                echo "placeholder"
+                bat "docker login -u ${docker_hub_login_USR}" -p ${docker_hub_login_PSW}
+                echo "Passou"
                 //Publish image
 
             }
