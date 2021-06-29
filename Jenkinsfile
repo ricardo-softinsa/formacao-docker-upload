@@ -8,7 +8,7 @@ pipeline{
         image_tag = "latest"
     }
     stages{
-        stages("Build Image"){
+        stage("Build Image"){
             steps{
                 //Assemble Image Name
                 image_full_name = "${docker_hub_account}/${repo_name}:${image_tag}"
