@@ -11,7 +11,7 @@ pipeline{
         stages("Build Image"){
             steps{
                 //Assemble Image Name
-                image_full_name = "${docker_hub_account}/repo_name:image_tag"
+                image_full_name = "${docker_hub_account}/${repo_name}:${image_tag}"
                 echo "Image name: ${image_full_name}"
 
                 //Build Image
